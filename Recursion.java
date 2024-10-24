@@ -52,10 +52,6 @@ public class Recursion{
     // next Problem
 
     public static int countHi2(String str){
-        // check for null
-        if (str == null)
-            return 0;
-
 
         // base case
         if (str.length() < 2)
@@ -65,12 +61,19 @@ public class Recursion{
         char char1 = str.charAt(0);
         char char2 = str.charAt( 1);
 
-        //check if char1 and h  char2 is an i
-        if(char1 == 'h' && char2 == 'i')
-            return 1 + countHi(str.substring(2)); // send tin the string minus the first 2 char
+        //check if substring starts with "hi"
+        if(str.startsWith("hi")){
+            if (str.length() < 3|| str.charAt(0) != 'x'){
+                return 1 + countHi2(str.substring(2)); // move past "hi"
 
-        return countHi(str.substring(1)); // send in the string minus the first char
+            }else {
+                return countHi2(str.substring(2)); // Just move past "hi"
+            }
+        }else {
+            return countHi2(str.substring(2)); // Just move past "hi"
+        }
 
+       
     }
 
 
