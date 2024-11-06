@@ -1,6 +1,22 @@
 // Vanessa Estrada
+//10.24.24
+//Recursive Problems Testing with Junit
 
 public class Recursion{
+    //Run|Debug
+    public static void main(String[] args) {
+        // Test Cases
+        System.out.println(count8(8));      //expected output: 1
+        System.out.println(count8(818));    //expected output: 2
+        System.out.println(count8(8818));   //expected output: 3
+        System.out.println(count8(123456)); //expected output: 0
+        System.out.println(count8(88888));  //expected output: 9
+        System.out.println(count8(80808));  //expected output: 2
+
+    }
+
+
+
     public static void main(String[] args){
         // test cases
         System.out.println(count8(8));   // expected output: 1
@@ -75,6 +91,8 @@ public class Recursion{
 
        
     }
+
+    
 
 
 

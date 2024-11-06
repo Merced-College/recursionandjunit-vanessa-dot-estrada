@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class Count8Test {
+
+    @Test
     public void testCount1(){
         // test cases
         assertEquals(1, Recursion.count8(8));
