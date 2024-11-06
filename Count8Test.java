@@ -20,16 +20,16 @@ public class Count8Test {
     @Test
     public void testCount3(){
         // test cases
-        assertEquals(1, Recursion.count8(1213128));
+        assertEquals(2, Recursion.count8(81213128));
         
     }
-    
     @Test
     public void testCount4(){
         // test cases
-        assertEquals(1, Recursion.count8(1213128));
+        assertEquals(3, Recursion.count8(812183128));
         
     }
+    
     
  // end of test for first method
 

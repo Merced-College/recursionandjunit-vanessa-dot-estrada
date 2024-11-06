@@ -15,19 +15,12 @@ public class Recursion{
 
     }
 
-
-
-    public static void main(String[] args){
-        // test cases
-        System.out.println(count8(8));   // expected output: 1
-    }
-
         public static int count8(int n) {
             // base case if N is 0, ther eare no digits to count
             if (n == 0) {
                 return 0;
             }
-            // check the rightmost digit
+            //check Right most digit
             int rightmostDigit = n % 10;
 
             // if the right most digit is 8
@@ -35,7 +28,7 @@ public class Recursion{
                 return 1 + count8(n / 10);
 
             } else {
-                // if the rightmost digit is not 8, just procced to the next digit
+                // if the rightmost digit is not 8, just proceed to the next digit
                 return count8(n / 10);
             } // End else
         
@@ -59,7 +52,7 @@ public class Recursion{
 
         //check if char1 and h  char2 is an i
         if(char1 == 'h' && char2 == 'i')
-            return 1 + countHi(str.substring(2)); // send tin the string minus the first 2 char
+            return 1 + countHi(str.substring(2)); // send in the string minus the first 2 char
 
         return countHi(str.substring(1)); // send in the string minus the first char
 
@@ -90,10 +83,23 @@ public class Recursion{
         }
 
        
+    } // end
+
+    public static int strCount(String str, String sub) {
+        // Base case: if the string is shorter than the substring, return 0
+        if (str.length() < sub.length()) {
+            return 0;
     }
 
-    
-
+        // Check if the string starts with the substring
+        if (str.startsWith(sub)) {
+            // If it does, count 1 and recursively call the function on the remaining string
+            return 1 + strCount(str.substring(sub.length()), sub);
+        } else {
+            // Otherwise, continue with the next substring (skip the first character)
+            return strCount(str.substring(1), sub);
+        }
+    }
 
 
 } // end of class
